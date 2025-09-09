@@ -1,0 +1,12 @@
+services:
+    number:
+        image: develengie/hw-1-number
+        build:
+            dockerfile: number.dockerfile
+    index:
+        image: develengie/hw-1
+        build: .
+        ports:
+            - "3000:3000"
+        depends_on:
+            - number
