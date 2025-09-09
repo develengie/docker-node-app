@@ -8,5 +8,7 @@ services:
         build: .
         ports:
             - "3000:3000"
+        environment:
+            - "NUMBER_SERVER_HOST=http://number:3005"
         depends_on:
             - number
