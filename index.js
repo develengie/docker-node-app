@@ -6,7 +6,7 @@ const app = express();
 const PORT = 3000;
 
 app.get("/", (req, res) => {
-    fetch("http://localhost:3005")
+    fetch("http://number:3005")
         .then((res) => res.json())
         .then((number) => res.send(`Random number - ${number}.`));
 });
